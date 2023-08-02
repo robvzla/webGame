@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/styles.css">
     <title>Rock Paper Scissors</title>
 </head>
 <body>
@@ -13,7 +14,7 @@
 
     <section class="score-board">
         <div id="user-label" class="badge">You</div>
-        <div id="computer-label" class="badge">Computer</div>
+        <div id="computer-label" class="badge">PC</div>
         <span id="user-score">0</span>:<span id="computer-score">0</span>
 
     </section>
@@ -21,6 +22,20 @@
     <section class="result">
         <p>Paper covers rock. You win!</p>
     </section>
+
+    <section class="choices">
+        <div class="choice" id="rock">
+            <img src="images/rock.png" alt="Rock images">
+        </div>
+        <div class="choice" id="paper">
+            <img src="images/paper.png" alt="Paper images">
+        </div>
+        <div class="choice" id="scissors">
+            <img src="images/scissors.png" alt="Scissors images">
+        </div>
+    </section>
+
+    <p id="move-message">Make your move</p>
 
 </body>
 </html>
