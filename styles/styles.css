@@ -87,3 +87,18 @@ header h1 {
     font-weight: bold;
     font-size: 20px;
 }
+
+.green-win{
+    border: 4px solid green;
+    box-shadow: 0 0 10px #31b43a;
+}
+
+.red-loose{
+    border: 4px solid red;
+    box-shadow: 0 0 10px #d01115;
+}
+
+.gray-draw{
+    border: 4px solid gray;
+    box-shadow: 0 0 10px #25292b;
+}
