@@ -17,16 +17,19 @@ function getComputerChoice() {
 function win(user, computer) {
     userScore++;
     userScore_span.innerHTML = userScore;
-    computerScore.innerHTML = computerScore;
+    computerScore_span.innerHTML = computerScore;
     result_section.innerHTML = user + " beats " + computer + ". You win !";
 }
 
-function loose() {
-    console.log("You loose");
+function loose(user, computer) {
+    computerScore++;
+    userScore_span.innerHTML = userScore;
+    computerScore_span.innerHTML = computerScore;
+    result_section.innerHTML = user + " beats " + computer + ". You loose !";
 }
 
-function draw() {
-    console.log("It's a draw");
+function draw(user, computer) {
+    result_section.innerHTML = user + " it's the same as " + computer + ". It's a draw !";
 }
 
 function game(userChoice) {
