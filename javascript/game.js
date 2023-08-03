@@ -19,6 +19,8 @@ function win(user, computer) {
     userScore_span.innerHTML = userScore;
     computerScore_span.innerHTML = computerScore;
     result_section.innerHTML = user + " beats " + computer + ". You win !";
+    document.getElementById(user).classList.add("green-win");
+    setTimeout(() => document.getElementById(user).classList.remove("green-win"), 500);
 }
 
 function loose(user, computer) {
@@ -26,10 +28,14 @@ function loose(user, computer) {
     userScore_span.innerHTML = userScore;
     computerScore_span.innerHTML = computerScore;
     result_section.innerHTML = user + " beats " + computer + ". You loose !";
+    document.getElementById(user).classList.add("red-loose");
+    setTimeout(() => document.getElementById(user).classList.remove("red-loose"), 500);
 }
 
 function draw(user, computer) {
     result_section.innerHTML = user + " it's the same as " + computer + ". It's a draw !";
+    document.getElementById(user).classList.add("gray-draw");
+    setTimeout(() => document.getElementById(user).classList.remove("gray-draw"), 500);
 }
 
 function game(userChoice) {
@@ -57,17 +63,9 @@ function game(userChoice) {
 }
 
 function main() {
-    rock_div.addEventListener('click', function() {
-        game("rock");
-    });
-    
-    paper_div.addEventListener('click', function() {
-        game("paper");   
-    });
-    
-    scissors_div.addEventListener('click', function() {
-        game("scissors");   
-    });
+    rock_div.addEventListener('click', () => game("rock"));
+    paper_div.addEventListener('click', () => game("paper"));
+    scissors_div.addEventListener('click', () => game("scissors"));
 }
 
 main();
